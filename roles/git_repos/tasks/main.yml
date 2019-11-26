@@ -1,0 +1,7 @@
+---
+  - name: clone git repos
+    git:
+      repo: '{{ item }}'
+      dest: /home/{{ user }}/projects
+    with_items: "{{ repos }}"
+...

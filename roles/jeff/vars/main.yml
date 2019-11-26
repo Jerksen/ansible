@@ -1,0 +1,26 @@
+---
+packages:
+  present:
+    - git
+    - steam
+    - ansible
+    - docker
+    - git
+    - wget
+    - pulseaudio-bluetooth
+    - slack-online
+  absent:
+    - palemoon
+
+dirs:
+  - aur
+  - projects
+  - books
+
+repos:
+  - repo: git@github.com:Jerksen/dots.git
+    name: dots
+  - repo: git@github.com:Jerksen/qmk_firmware.git
+    name: qmk_firmware
+
+user: jeff

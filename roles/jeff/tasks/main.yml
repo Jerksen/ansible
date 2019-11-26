@@ -1,0 +1,55 @@
+---
+- name: create home directories
+  file:
+    path: /home/{{ user }}/{{ item }}
+    state: directory
+    owner: "{{ user }}"
+  with_items: "{{ dirs }}"
+  tags:
+    - home
+    - aur
+
+- name: clone the ansible-aur package
+  git:
+    repo: "https://aur.archlinux.org/ansible-aur-git.git"
+    dest: /home/{{ user }}/aur/ansible-aur
+  become_user: "{{ user }}"
+  tags:
+    - aur
+    - git
+
+- name: install the ansible-aur package
+  command: makepkg -si
+  become: no
+  become_user: "{{ user }}"
+  args:
+    chdir: /home/{{ user }}/aur
+  tags:
+    - aur
+
+- name: install packages
+  pacman:
+    update_cache: yes
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages.present }}"
+  tags:
+    - pacman
+
+- name: remove packages
+  pacman:
+    name: "{{ item }}"
+    state: absent
+  with_items: "{{ packages.absent }}"
+  tags:
+    - pacman
+
+- name: clone git repos
+  git:
+    repo: "{{ item.repo }}"
+    dest: /home/{{ user }}/{{ item.name }}
+  become_user: "{{ user }}"
+  with_items: "{{ repos }}"
+  tags:
+    - git
+...
