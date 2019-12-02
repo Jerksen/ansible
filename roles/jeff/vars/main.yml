@@ -21,6 +21,7 @@ dirs:
   - aur
   - projects
   - books
+  - AppImages
 
 repos:
   - repo: git@github.com:Jerksen/dots.git
