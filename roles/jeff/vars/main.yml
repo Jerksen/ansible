@@ -2,6 +2,11 @@
 packages:
   present:
     - git
+    - fish
+    - blender
+    - inkscape
+    - retroarch
+    - telegram-desktop
     - steam
     - ansible
     - docker
@@ -22,5 +27,15 @@ repos:
     name: dots
   - repo: git@github.com:Jerksen/qmk_firmware.git
     name: qmk_firmware
+
+configs:
+  files:
+    - .bashrc
+    - .vimrc
+    - .ansible.cfg
+  dirs:
+    - .config
+    - .i3
+    - .ansible
 
 user: jeff

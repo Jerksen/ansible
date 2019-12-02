@@ -1,0 +1,13 @@
+---
+- name: mount stuff
+  mount:
+    path: "{{ item.dst }}"
+    src: "{{ item.src }}"
+    opts: hard
+    fstype: nfs
+    state: present
+  with_items: "{{ nfsshares }}"
+  become: yes
+  tags:
+    - nfs
+...

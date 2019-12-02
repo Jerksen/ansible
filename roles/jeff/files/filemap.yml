@@ -1,0 +1,15 @@
+name: i3config
+  type: dir
+  src: ~/.i3
+
+name: minecraft
+  type: dir
+  src: ~/.minecraft/saves
+
+name: vimrc
+  type: file
+  src: ~/.vimrc
+
+name: bashrc
+  type: file
+  src: ~/.bashrc

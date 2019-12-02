@@ -1,0 +1,15 @@
+user: jeff
+nfsshares:
+  - name: books
+    src: 192.168.1.105:/volume1/books
+    dst: /home/{{ user }}/books
+  - name: music
+    src: 192.168.1.105:/volume1/music
+    dst: /home/{{ user }}/Music
+  - name: photos
+    src: 192.168.1.105:/volume1/photo
+    dst: /home/{{ user }}/Pictures
+  - name: videos
+    src: 192.168.1.105:/volume1/video
+    dst: /home/{{ user }}/Videos
+
