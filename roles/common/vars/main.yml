@@ -2,14 +2,14 @@ user: jeff
 nfsshares:
   - name: books
     src: 192.168.1.105:/volume1/books
-    dst: /home/{{ user }}/books
+    dst: /mnt/books
   - name: music
     src: 192.168.1.105:/volume1/music
-    dst: /home/{{ user }}/Music
+    dst: /mnt/music
   - name: photos
     src: 192.168.1.105:/volume1/photo
-    dst: /home/{{ user }}/Pictures
+    dst: /mnt/pictures
   - name: videos
     src: 192.168.1.105:/volume1/video
-    dst: /home/{{ user }}/Videos
+    dst: /mnt/videos
 

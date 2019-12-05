@@ -28,6 +28,8 @@ repos:
     name: dots
   - repo: git@github.com:Jerksen/qmk_firmware.git
     name: qmk_firmware
+  - repo: git@github.com:Jerksen/openscad
+    name: openscad
 
 configs:
   files:
@@ -38,5 +40,10 @@ configs:
     - .config
     - .i3
     - .ansible
+
+nfsshares:
+  - name: home-backup
+    src: 192.168.1.105:/volume1/homes/{{ user }}
+    dst: /home/{{ user }}/backup
 
 user: jeff

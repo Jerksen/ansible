@@ -14,6 +14,7 @@ set number
 set cursorline
 set lazyredraw
 set showmatch
+set scrolloff=3 " keep next 3 lines always visible
 
 " search
 set incsearch
