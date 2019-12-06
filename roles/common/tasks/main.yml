@@ -1,4 +1,12 @@
 ---
+- name: create directories
+  file:
+    path: "{{ item.dst }}"
+    state: directory
+    mode: 0666
+  with_items: "{{ nfsshares }}"
+
+
 - name: mount stuff
   mount:
     path: "{{ item.dst }}"

@@ -7,20 +7,19 @@ packages:
     - inkscape
     - retroarch
     - telegram-desktop
-    - steam
-    - ansible
+    - steam-manjaro
+    - steam-native
     - docker
-    - git
     - wget
     - pulseaudio-bluetooth
     - slack-online
+    - openssh
   absent:
     - palemoon
 
 dirs:
   - aur
   - projects
-  - books
   - AppImages
 
 repos:

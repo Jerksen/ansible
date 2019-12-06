@@ -16,7 +16,7 @@
 
 - name: remove packages
   pacman:
-    name: "{{ item.absent }}"
+    name: "{{ packages.absent }}"
     state: absent
   become: yes
   tags:
@@ -40,9 +40,9 @@
     - shell
 
 - name: set fish to be default shell
-  command: chsh -s "/usr/bin/fish"
-  tags:
-    - shell
+  user:
+    name: "{{ user }}"
+    shell: /usr/bin/fish
 
 - name: clone git repos
   git:

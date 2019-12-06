@@ -1,0 +1,71 @@
+- name: install git
+  pacman:
+    name: "git"
+    state: present
+  become: yes
+
+- name: install fish
+  pacman:
+    name: "fish"
+    state: present
+  become: yes
+
+- name: install blender
+  pacman:
+    name: "blender"
+    state: present
+  become: yes
+
+- name: install inkscape
+  pacman:
+    name: "inkscape"
+    state: present
+  become: yes
+
+- name: install retroarch
+  pacman:
+    name: "retroarch"
+    state: present
+  become: yes
+
+- name: install telegram
+  pacman:
+    name: "telegram-desktop"
+    state: present
+  become: yes
+
+- name: install steam
+  pacman:
+    name: "steam"
+    state: present
+  become: yes
+
+- name: install docker
+  pacman:
+    name: "docker"
+    state: present
+  become: yes
+
+- name: install wget
+  pacman:
+    name: "wget"
+    state: present
+  become: yes
+
+- name: install pulseaudio BT
+  pacman:
+    name: "pulseaudio-bluetooth"
+    state: present
+  become: yes
+
+- name: install slack
+  pacman:
+    name: "slack-online"
+    state: present
+  become: yes
+
+- name: install openssh
+  pacman:
+    name: "openssh"
+    state: present
+  become: yes
