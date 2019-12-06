@@ -23,8 +23,6 @@ dirs:
   - AppImages
 
 repos:
-  - repo: git@github.com:Jerksen/dots.git
-    name: dots
   - repo: git@github.com:Jerksen/qmk_firmware.git
     name: qmk_firmware
   - repo: git@github.com:Jerksen/openscad
