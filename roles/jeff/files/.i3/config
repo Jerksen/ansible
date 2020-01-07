@@ -134,14 +134,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 0:factory
-set $ws2 1:homelab
-set $ws3 2:game
-set $ws4 3:browse
-set $ws5 4:studio
-set $ws6 5:vids
-set $ws7 6:browse
-set $ws8 7:overflow
+set $ws1 "1:factory"
+set $ws2 "2:homelab"
+set $ws3 "3:game"
+set $ws4 "4:browse"
+set $ws5 "5:studio"
+set $ws6 "6:vids"
+set $ws7 "7:browse"
+set $ws8 "8:overflow"
 
 # bind workspaces to displays
 workspace $ws1 output $disp1
