@@ -1,0 +1,17 @@
+---
+- name: install packages
+  pacman:
+    name: "{{ packages.present }}"
+    state: present
+  become: yes
+  tags:
+    - pacman
+
+- name: remove packages
+  pacman:
+    name: "{{ packages.absent }}"
+    state: absent
+  become: yes
+  tags:
+    - pacman
+...

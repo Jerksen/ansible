@@ -1,0 +1,19 @@
+---
+packages:
+  present:
+    - git
+    - fish
+    - blender
+    - inkscape
+    - retroarch
+    - telegram-desktop
+    - steam-manjaro
+    - steam-native
+    - docker
+    - wget
+    - pulseaudio-bluetooth
+    - slack-online
+    - openssh
+    - hplip
+  absent:
+    - palemoon

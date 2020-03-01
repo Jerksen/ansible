@@ -1,0 +1,7 @@
+# this is for Jeff's NZXT, Ucelegon
+- hosts: local
+  connection: local
+  roles:
+    - manjaro
+    - common
+    - jeff

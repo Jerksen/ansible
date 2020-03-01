@@ -14,6 +14,7 @@ packages:
     - pulseaudio-bluetooth
     - slack-online
     - openssh
+    - hplip
   absent:
     - palemoon
 

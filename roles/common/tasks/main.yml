@@ -3,11 +3,19 @@
   package:
     name: openssh
     state: present
+  tags:
+    - access
 
 - name: config ssh server
   service:
     name: sshd
     enabled: yes
+  tags:
+    - access
+
+# TODO: add printers automagically using hp-setup
+# TODO: make sure hplip is installed
+# until this hplip stuff is done, make sure you run "sudo pacman -S hplip" or equivalent and then run hp-setup to detect the network printer
 
 - name: create directories
   file:
@@ -18,7 +26,7 @@
   become: yes
   tags:
     -nfs
-
+    -backup
 
 - name: mount stuff
   mount:
@@ -31,4 +39,5 @@
   become: yes
   tags:
     - nfs
+    - backup
 ...
